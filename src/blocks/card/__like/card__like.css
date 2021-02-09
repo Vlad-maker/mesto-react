@@ -1,14 +1,14 @@
 .card__like {
+  width: 22px;
+  height: 19px;
   background-color: #ffffff;
   background-image: url("../../../img/like-btn.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 22px;
-  height: 19px;
   border: none;
   opacity: 1;
-  transition: opacity 0.2s linear;
+  transition: opacity 0.3s linear;
   cursor: pointer;
 }
 

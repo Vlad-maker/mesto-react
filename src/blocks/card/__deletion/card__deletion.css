@@ -1,17 +1,17 @@
 .card__deletion {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 18px;
+  height: 19px;
   background-color: transparent;
   background-image: url("../../../img/delete.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   border: none;
-  width: 18px;
-  height: 19px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
   opacity: 1;
-  transition: opacity 0.2s linear;
+  transition: opacity 0.3s linear;
   cursor: pointer;
 }
 
