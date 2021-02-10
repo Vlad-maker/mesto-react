@@ -27,11 +27,9 @@
 Сборка минифицирована, а имена файлов включают хеши. \
 Ваше приложение готово к развертыванию!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Примечание: это односторонняя операция. После того, как вы  `eject`,  вы не сможете вернуться!**
 
 Если вас не устраивает инструмент сборки и выбор конфигурации, вы можете «извлечь» в любой момент. Эта команда удалит из вашего проекта зависимость отдельной сборки.
 
