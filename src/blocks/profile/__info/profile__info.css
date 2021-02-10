@@ -1,9 +1,9 @@
 .profile__info {
   display: grid;
-  align-items: center;
   grid-template-columns: fit-content(500px) 24px;
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
   gap: 7px 20px;
+  align-items: center;
   max-width: 552px;
 }
 

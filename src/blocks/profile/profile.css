@@ -1,8 +1,8 @@
 .profile {
   display: grid;
-  align-items: center;
   grid-template-columns: minmax(min-content, max-content) 1fr minmax(min-content, max-content);
   gap: 30px;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
