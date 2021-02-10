@@ -16,16 +16,16 @@
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Запускает тестовый раннер в интерактивном режиме просмотра.\
+См. Раздел [running tests](https://facebook.github.io/create-react-app/docs/running-tests) за дополнительной информацией.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Собирает приложение для производства в папку `build`. \
+Он правильно связывает React в производственном режиме и оптимизирует сборку для достижения максимальной производительности.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Сборка минифицирована, а имена файлов включают хеши. \
+Ваше приложение готово к развертыванию!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
@@ -33,9 +33,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Если вас не устраивает инструмент сборки и выбор конфигурации, вы можете «извлечь» в любой момент. Эта команда удалит из вашего проекта зависимость отдельной сборки.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
+Вместо этого он скопирует все файлы конфигурации и транзитивные зависимости (webpack, Babel, ESLint и т. Д.) Прямо в ваш проект, чтобы вы имели полный контроль над ними. Все команды, кроме `eject`, по-прежнему будут работать, но они будут указывать на скопированные сценарии, чтобы вы могли их настроить. На этом этапе вы сами по себе.
