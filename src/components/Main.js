@@ -24,6 +24,9 @@ export default function Main(props) {
             .then((data) => {
                 setCards(data);
             })
+            .catch((err) => {
+                console.log(err)
+            });
     }, []);
 
     return (
