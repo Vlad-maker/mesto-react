@@ -42,28 +42,28 @@ class Api {
             .then(res => this._getResponse(res))
     }
 
-    deleteCard(card) {
-        return fetch(`${this.Url}/cards/${card['_id']}`, {
+    deleteCard(cardId) {
+        return fetch(`${this.Url}/cards/${cardId}`, {
             method: 'DELETE',
             headers: this.headers,
         })
             .then(res => this._getResponse(res))
     }
 
-    addLike(card) {
-        return fetch(`${this.Url}/cards/likes/${card['cardId']} `, {
-            method: 'PUT',
-            headers: this.headers
-        })
-            .then(res => this._getResponse(res))
-    }
-
-    removeLike(card) {
-        return fetch(`${this.Url}/cards/likes/${card['cardId']}`, {
-            method: 'DELETE',
-            headers: this.headers
-        })
-            .then(res => this._getResponse(res))
+    changeLikeStatus(cardId, isLiked) {
+        if (!isLiked) {
+            return fetch(`${this.Url}/cards/likes/${cardId} `, {
+                method: 'PUT',
+                headers: this.headers
+            })
+                .then(res => this._getResponse(res));
+        } else {
+            return fetch(`${this.Url}/cards/likes/${cardId}`, {
+                method: 'DELETE',
+                headers: this.headers
+            })
+                .then(res => this._getResponse(res));
+        }
     }
 
     changeUserAvatar(data) {
@@ -94,4 +94,4 @@ const api = new Api({
     }
 });
 
-export default api
+export default api;

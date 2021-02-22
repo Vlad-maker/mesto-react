@@ -1,5 +1,5 @@
 import React from 'react';
-export default function ImagePopup(props) {
+function ImagePopup(props) {
     return (
         <div
             className={`popup page__popup popup_type_view-image ${props.card.link && "popup_opened"}`}>
@@ -22,3 +22,4 @@ export default function ImagePopup(props) {
         </div>
     );
 }
+export default ImagePopup;

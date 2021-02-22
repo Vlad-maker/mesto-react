@@ -1,34 +1,8 @@
 import React from "react";
-import api from "../utils/api.js";
 import Card from "./Card.js";
-export default function Main(props) {
-    const [ userName, setUserName] = React.useState('');
-    const [ userDescription, setUserDescription ] = React.useState('');
-    const [ userAvatar, setUserAvatar ] = React.useState('');
-    const [ cards, setCards ] = React.useState([]);
-
-    React.useEffect(() => {
-        api.getUserData()
-            .then((data) => {
-                setUserName(data['name']);
-                setUserDescription(data['about']);
-                setUserAvatar(data['avatar']);
-            })
-            .catch((err) => {
-                console.log(err)
-            });
-    }, []);
-
-    React.useEffect(() => {
-        api.getInitialCards()
-            .then((data) => {
-                setCards(data);
-            })
-            .catch((err) => {
-                console.log(err)
-            });
-    }, []);
-
+import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
+function Main(props) {
+    const currentUser = React.useContext(CurrentUserContext);
     return (
         <main className="content page__content">
             <section className="profile content__profile">
@@ -36,11 +10,11 @@ export default function Main(props) {
                     className="profile__avatar-button"
                     type="button"
                     onClick={props.onEditAvatar}>
-                    <img className="profile__avatar" src={userAvatar} alt="Аватар" />
+                    <img className="profile__avatar" src={currentUser.avatar} alt="Аватар" />
                 </button>
                 <div className="profile__info">
-                    <h1 className="profile__name">{userName}</h1>
-                    <p className="profile__about">{userDescription}</p>
+                    <h1 className="profile__name">{currentUser.name}</h1>
+                    <p className="profile__about">{currentUser.about}</p>
                     <button
                         className="profile__edit-button"
                         type="button"
@@ -55,11 +29,10 @@ export default function Main(props) {
                     onClick={props.onAddPlace}
                 />
             </section>
-            
             <section className="cards content__cards">
                 <ul className="cards__grid">
                     {
-                        cards.map((card) => (
+                        props.cards.map((card) => (
                             <Card
                                 key={card._id}
                                 card={card}
@@ -67,6 +40,8 @@ export default function Main(props) {
                                 link={card.link}
                                 likes={card.likes}
                                 onCardClick={props.onCardClick}
+                                onCardLike={props.onCardLike}
+                                onCardDelete={props.onCardDelete}
                             />
                             )
                         )
@@ -77,3 +52,4 @@ export default function Main(props) {
         </main>
     );
 }
+export default Main;
