@@ -1,6 +1,6 @@
 ## Проект фото-галерея.  
 
-[Click me!](https://vlad-maker.github.io/mesto-react/).
+[Click me!](https://vlad-maker.github.io/mesto-react/)
 
 **Возможности:**
 - [x] Редактировать имя и описание профиля
@@ -10,17 +10,13 @@
 - [x] Оценивать фото
 
 Чтобы запустить проект, воспользуйтесь командой
-
-## `npm start`
-
+#### `npm start`
 Приложение запустится в режиме разработки и откроется по адресу в браузере: [http://localhost:3000](http://localhost:3000)
 
-## `npm test`
-
+#### `npm test`
 Запускает тестовый раннер в интерактивном режиме просмотра.
 См. Раздел [running tests](https://facebook.github.io/create-react-app/docs/running-tests) за дополнительной информацией.
 
-## `npm run build`
-
+#### `npm run build`
 Собирает приложение для производства в папку `build`. 
 
